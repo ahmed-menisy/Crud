@@ -12,7 +12,9 @@ html {
 ::-webkit-scrollbar-thumb {
    background-color: #515151;
 }
-
+::selection {
+   background-color: #616161;
+}
 /* ------------------- End Global ------------------- */
 /* ---- Start  crud ---- */
 div[class~="table-responsive"] {

@@ -13,7 +13,6 @@ var searchInput = document.getElementById("btnSearch");
 var contDeleteData = document.getElementById("contDelete");
 var btnDeleteAll = document.getElementById("btnDeleteData");
 var deleteSureYes = document.getElementById("deleteSureYes");
-var deleteSureNo = document.getElementById("deleteSureNo");
 // ----- btn restForm ----- //
 var deletDataForm = document.getElementById("restForm");
 // -------------------- alert -------------------- //
@@ -46,16 +45,14 @@ btnProduct.onclick = function () {
 };
 // --------------- delete btn //
 btnDeleteAll.onclick = function () {
-   contDeleteData.classList.replace("d-none", "d-block");
+   contDeleteData.classList.toggle("d-none");
 };
 deleteSureYes.onclick = function () {
    deleteFullData();
    setLocalStroage();
    btnProduct.innerHTML = "Add Product";
    btnProduct.classList.replace("btn-warning", "btn-primary");
-};
-deleteSureNo.onclick = function () {
-   contDeleteData.classList.replace("d-block", "d-none");
+   contDeleteData.classList.add("d-none");
 };
 // --------------- search onKeyUP //
 btnSearch.onkeyup = function () {
@@ -168,7 +165,6 @@ function deleteFullData() {
    products.splice(0, products.length);
    displayData();
    totalProd();
-   contDeleteData.classList.replace("d-block", "d-none");
 }
 // --------------- To Set Data To Local Storage
 function setLocalStroage() {
