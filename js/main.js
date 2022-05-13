@@ -62,7 +62,11 @@ btnSearch.onkeyup = function () {
    searchData();
 };
 // --------------- delet Data Form Reset //
-
+deletDataForm.onclick = function () {
+   if (btnProduct.innerHTML != "Update") {
+      resetForm();
+   }
+};
 // --------------------  Functions -------------------- //
 // --------------- To Get Data
 function getData() {
