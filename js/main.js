@@ -113,7 +113,7 @@ function searchData() {
          <td>${products[i].category}</td>
          <td>${products[i].description}</td>
          <td >
-         <button  class="btn btn-sm btn-warning" type="button">Update</button>
+         <button onclick="getUpdateInfo(${i})" class="btn btn-sm btn-warning" type="button">Update</button>
          <button onclick="deleteRow(${i})" class="btn btn-sm btn-danger" type="button">Delete</button>
          </td>
       </tr>
