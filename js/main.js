@@ -61,8 +61,11 @@ deleteSureNo.onclick = function () {
 btnSearch.onkeyup = function () {
    searchData();
 };
+// --------------- delet Data Form Reset //
 deletDataForm.onclick = function () {
-   resetForm();
+   if (btnProduct.innerHTML != "Update") {
+      resetForm();
+   }
 };
 // --------------------  Functions -------------------- //
 // --------------- To Get Data
