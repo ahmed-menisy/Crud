@@ -1,4 +1,4 @@
-// --------------- Get Element --------------- //
+// -------------------- Get Element -------------------- //
 var productNameInput = document.getElementById("productName");
 var productPriceInput = document.getElementById("productPrice");
 var productCategoryInput = document.getElementById("productCategory");
@@ -14,7 +14,9 @@ var contDeleteData = document.getElementById("contDelete");
 var btnDeleteAll = document.getElementById("btnDeleteData");
 var deleteSureYes = document.getElementById("deleteSureYes");
 var deleteSureNo = document.getElementById("deleteSureNo");
-// --------------- alert --------------- //
+// ----- btn restForm ----- //
+var deletDataForm = document.getElementById("restForm");
+// -------------------- alert -------------------- //
 var alertSucces = document.getElementById("alertSucces");
 var alertDelete = document.getElementById("alertDelete");
 // --------------- //
@@ -28,7 +30,7 @@ if (JSON.parse(localStorage.getItem("productList") != null)) {
    displayData();
    totalProd();
 }
-// ---------------  Events --------------- //
+// --------------------  Events -------------------- //
 // --------------- add btn
 btnProduct.onclick = function () {
    if (btnProduct.innerHTML == "Add Product") {
@@ -59,6 +61,10 @@ deleteSureNo.onclick = function () {
 btnSearch.onkeyup = function () {
    searchData();
 };
+deletDataForm.onclick = function () {
+   resetForm();
+};
+// --------------------  Functions -------------------- //
 // --------------- To Get Data
 function getData() {
    var product = {

@@ -21,6 +21,7 @@
                   <div class="data d-flex justify-content-end">
                      <button
                         id="btnDeleteData"
+                        tabindex="-1"
                         type="button"
                         class="btn btn-danger btn-sm fs-6"
                      >
@@ -95,10 +96,17 @@
                         ></textarea>
                      </div>
                   </div>
-                  <div class="btn-add clearfix">
+                  <div class="btn-add d-flex justify-content-between">
                      <button
                         type="button"
-                        class="btn btn-primary float-end"
+                        class="btn btn-sm btn-link"
+                        id="restForm"
+                     >
+                        Reset
+                     </button>
+                     <button
+                        type="button"
+                        class="btn btn-primary"
                         id="addProduct"
                      >
                         Add Product
